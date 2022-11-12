@@ -49,7 +49,7 @@ app.delete('/delete-product/:id', async (req, res) => {
 
 const port = process.env.PORT || 3010;
 mongoose.connect(process.env.mongoURL, () => {
-    console.log('database e aslam');
+    console.log('database e aslam at last');
     app.listen(port, () => {
         console.log('server started');
     });
