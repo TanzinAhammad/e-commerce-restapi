@@ -12,11 +12,12 @@ app.use(bodyParser.json());
 // app.use(express.json());
 const Person = mongoose.model('product', {
     productName: String,
-    productCode: String,
     category: String,
+    freshness: String,
     price: Number,
-    description: String,
-    imageURL: String,
+    date: String,
+    quant: Number,
+    ident: Number,
 });
 app.get('/get-product', (req, res) => {
     Person.find().then((result) => res.json(result));
